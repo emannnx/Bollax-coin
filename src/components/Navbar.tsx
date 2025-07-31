@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -27,7 +26,7 @@ const Navbar = () => {
   const navItems = ['home', 'about', 'projects', 'skills', 'contact'];
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <header className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <motion.a 
           href="#" 
@@ -97,12 +96,12 @@ const Navbar = () => {
         {isMenuOpen && (
           <motion.div 
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: '100vh' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.5 }}
-            className="md:hidden bg-white py-6 px-4 absolute w-full shadow-lg"
+            className="md:hidden fixed top-0 left-0 w-full h-full bg-white/95 dark:bg-gray-900/95 py-6 px-4 z-[9999] shadow-lg"
           >
-            <nav className="flex flex-col space-y-5">
+            <nav className="flex flex-col space-y-5 mt-16">
               {navItems.map((item, index) => (
                 <motion.a 
                   key={item}
@@ -110,7 +109,7 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                   href={`#${item}`} 
-                  className="font-medium capitalize text-gray-800 hover:text-portfolio-primary transition-colors duration-500 pl-2 border-l-2 border-transparent hover:border-portfolio-primary"
+                  className="font-medium capitalize text-gray-800 dark:text-gray-100 hover:text-portfolio-primary transition-colors duration-500 pl-2 border-l-2 border-transparent hover:border-portfolio-primary"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item}

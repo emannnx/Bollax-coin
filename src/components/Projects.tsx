@@ -7,6 +7,7 @@ import fgclothings from '../assets/fgclothings.png'
 import fransispets from '../assets/fransispet.png'
 import emanninsite from '../assets/emanninsite.png'
 import springImage from '../assets/SpringBoot.jpg'
+import NNex from "../assets/NNex.png"
 
 const projects = [
   {
@@ -36,8 +37,17 @@ const projects = [
     link: "https://francispet.netlify.app/",
     github: "https://github.com/emannnx/FrancisPetLocal"
   },
-  {
+   {
     id: 4,
+    title: "N.EXX Smart Crypto Trading for All",
+    image: NNex,
+    description: "NNex is a platform that connects users with local service providers for various needs for Trading, Buying, and Selling of Cryptocurrency.",
+    tags: [ "React", "TypeScript", "MongoDb", "Tailwind CSS"],
+    link: "https://n-exx-smart-crypto-trading-for-all.vercel.app/",
+    github: "https://github.com/emannnx/N.EXX---Smart-Crypto-Trading-for-All"
+  },
+  {
+    id: 5,
     title: "Emannx-inisite AI",
     image: emanninsite,
     description: "An artificial intelligence-powered website that takes in an image or snaps provides personalized recommendations and insights.",
@@ -46,7 +56,7 @@ const projects = [
     github: "https://github.com/emannnx"
   },
     {
-    id: 5,
+    id: 6,
     title: "Nutrition Guide",
     image: springImage,
     description: "Nutrition Guide is a web application that provides users with personalized nutrition plans and dietary advice.",
@@ -55,7 +65,7 @@ const projects = [
     github: "https://github.com/emannnx/NutritionGuide"
   },
     {
-    id: 6,
+    id: 7,
     title: "Mood Tracker",
     image: springImage,
     description: "Mood Tracker springboot application.",
