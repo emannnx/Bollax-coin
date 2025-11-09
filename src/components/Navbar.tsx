@@ -9,6 +9,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  
 
   useEffect(() => {
     const handleScroll = () => {
